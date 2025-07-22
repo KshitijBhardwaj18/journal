@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"net/http"
-	"strconv"
+	// "strconv"
 
 	"github.com/go-chi/chi/v5"
 )
@@ -20,7 +20,7 @@ type Journal struct {
 }
 
 func NewHandler(db *sql.DB) *Handler {
-	return &Handler{db: db}
+	return &Handler{db: db} 
 }
 
 func (h *Handler) List(w http.ResponseWriter, r *http.Request) {

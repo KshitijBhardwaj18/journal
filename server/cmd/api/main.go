@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/yourusername/journal-app/db"
-	"github.com/yourusername/journal-app/internal/journal"
+	"github.com/KshitijBhardwaj18/journal/server/db"
+	"github.com/KshitijBhardwaj18/journal/server/internal/journal"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 
 	r := chi.NewRouter()
 	jh := journal.NewHandler(conn)
-
+ 
 	r.Get("/journals", jh.List)
 	r.Post("/journals", jh.Create)
 	r.Get("/journals/{id}", jh.GetByID)

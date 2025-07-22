@@ -3,3 +3,4 @@ CREATE TABLE IF NOT EXISTS journals (
   title TEXT NOT NULL,
   content TEXT NOT NULL
 );
+
